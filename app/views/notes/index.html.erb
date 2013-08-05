@@ -1,0 +1,27 @@
+<header>
+	<h1>list of notes</h1>
+</header>
+
+<section>
+	<ul>
+		<% @notes.each do |note| %>
+		<li><p>
+			<strong><%= note.title %></strong><br>
+			<%= note.image %>
+			<%= note.image_caption %>
+			<%= note.note %></p>
+		</li>
+		<% end %>
+	</ul>
+</section>
+
+<footer>
+	<nav>
+		<ul>
+			<li>
+				<%= link_to 'home', '/' %>
+			</li>
+		</ul>
+	</nav>
+	<p>Lynn Cook : 2013</p>
+</footer>
