@@ -12,9 +12,9 @@ class NotesController < ApplicationController
 	end
 
 	def create
-		@note = Note.new permitted_attributes
+		@note = current_user.notes.new permitted_attributes
 		if @note.save
-			redirect_to notes_path
+			redirect_to notes_path(@notes), :notice => "Note successfully created"
 		else
 			render 'new'
 		end

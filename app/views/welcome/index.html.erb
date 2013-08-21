@@ -1,5 +1,14 @@
 <header>
 	<h1>notebook</h1>
+        
+      
+      <p>
+        <% if current_user %>
+          <%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %>
+        <% else %>
+          <%= link_to 'Sign in', new_user_session_path %>
+        <% end %>
+      </p>
 </header>
 
 <section>
@@ -7,8 +16,11 @@
 	<p>I also want to add pictures of the work that I'm doing: food, art, coding related.</p>
 
 	<p><%= link_to 'list of notes', 'notes' %></p>
-
-	<p><%= link_to 'make new note', 'notes/new' %></p>
+	<p>
+		<% if current_user %>
+            <%= link_to 'make new note', new_note_path %>
+        <% end %>
+    </p>
 
 	<p>search</p>
 
