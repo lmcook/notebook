@@ -2,13 +2,15 @@
 	<h1>notebook</h1>
         
       
-      <p>
+      <!-- <p>
         <% if current_user %>
           <%= link_to 'Sign out', destroy_user_session_path, :method => 'delete' %>
         <% else %>
           <%= link_to 'Sign in', new_user_session_path %>
         <% end %>
-      </p>
+      </p> -->
+
+
 </header>
 
 <section>
@@ -28,5 +30,11 @@
 </section>
 
 <footer>
-	<p>Lynn Cook : 2013</p>
+	<p>Lynn Cook : 2013 : 
+    <% if current_user %>
+    <%= link_to 'logout', logout_path, :method => 'delete'%>
+    <% else %>
+    <%= link_to 'login', login_path %>
+    <% end %>
+  </p> 
 </footer>

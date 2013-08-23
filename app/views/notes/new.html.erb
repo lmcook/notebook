@@ -4,16 +4,18 @@
 
 <section>
 	<p>why don't'cha?</p>
-	<p>please</p>
 
 	<%= form_for @note do |f| %>
 	<p>
-		<%= f.label :title %> <%= f.text_field :title %><br>
-		<%= f.label :image %> <%= f.text_field :image %><br>
-		<%= f.label :image_caption %> <%= f.text_field :image_caption%><br>
-		<%= f.label :note %> <%= f.text_area :note %></p>
-		<p>
-		<%= f.submit %>
+		<%= f.label :title %><br>
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label :note %><br>
+		<%= f.text_area :note, cols: 40, rows: 7 %>
+	</p>
+	<p>
+		<%= f.submit %> | <%= link_to 'cancel', notes_path %>
 	</p>
 	<% end %>
 </section>
