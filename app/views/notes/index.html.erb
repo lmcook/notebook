@@ -11,8 +11,7 @@
 			<%= note.image_caption %>
 			<%= note.note %></p>
 			<p>
-				<%= note.user_id %>
-				<%= note.created_at %>
+				<%= note.created_at.localtime.asctime %>
 			</p>
 		</li>
 		<% end %>
