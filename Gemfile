@@ -9,7 +9,7 @@ end
 
 group :production do
 	gem 'pg'
-	gem 'rails_12factor'
+	gem 'rails_12factor'	
 end
 
 gem 'devise'
@@ -17,6 +17,8 @@ gem 'devise'
 gem 'paperclip'
 
 gem 'aws-sdk'
+
+gem 'unicorn'
 
 gem 'sass-rails', '~> 4.0.0'
 
