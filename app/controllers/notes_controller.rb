@@ -23,7 +23,7 @@ class NotesController < ApplicationController
 	protected
 
 	def permitted_attributes
-		(params.require(:note).permit(:title, :image, :image_caption, :note))
+		(params.require(:note).permit(:title, :image, :note))
 		
 	end
 end

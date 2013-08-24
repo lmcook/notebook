@@ -7,8 +7,7 @@
 		<% @notes.each do |note| %>
 		<li><p>
 			<strong><%= note.title %></strong><br>
-			<%= note.image %>
-			<%= note.image_caption %>
+			<%= image_for(note) %><br>
 			<%= note.note %></p>
 			<p>
 				<%= note.created_at.localtime.asctime %>

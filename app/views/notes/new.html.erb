@@ -3,7 +3,6 @@
 </header>
 
 <section>
-	<p>why don't'cha?</p>
 
 	<%= form_for @note do |f| %>
 	<p>
@@ -13,6 +12,10 @@
 	<p>
 		<%= f.label :note %><br>
 		<%= f.text_area :note, cols: 40, rows: 7 %>
+	</p>
+	<p>
+		<%= f.label :image %><br>
+		<%= f.file_field :image %>
 	</p>
 	<p>
 		<%= f.submit %> | <%= link_to 'cancel', notes_path %>

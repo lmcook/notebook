@@ -14,6 +14,10 @@ end
 
 gem 'devise'
 
+gem 'paperclip'
+
+gem 'aws-sdk'
+
 gem 'sass-rails', '~> 4.0.0'
 
 gem 'uglifier', '>= 1.3.0'
